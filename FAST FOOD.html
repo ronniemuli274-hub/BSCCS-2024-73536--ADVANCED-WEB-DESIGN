@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAST FOOD</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        header {
+            background-color: #ff5722;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .search-bar {
+            margin-bottom: 20px;
+            display: flex;
+        }
+        .search-bar input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+        }
+        .search-bar button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #ff5722;
+            color: white;
+            cursor: pointer;
+            border-radius: 0 4px 4px 0;
+        }
+        .menu {
+            margin-bottom: 20px;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        .menu-item span {
+            font-weight: bold;
+        }
+        .order-form input,
+        .order-form textarea,
+        .order-form button {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+        }
+        .order-form button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FAST FOOD</h1>
+    </header>
+
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search for food...">
+            <button onclick="searchFood()">Search</button>
+        </div>
+
+        <div class="menu">
+            <h2>Menu</h2>
+            <ol>
+            </ol>
+            <div class="menu-item">
+                <span>Pepporoni Pizza</span>
+                <span>$10</span>
+                <span>Cheese and pepporoni</span>
+            </div>
+            <div class="menu-item">
+                <span>Chicken Nuggets</span>
+                <span>$4</span>
+                <span>crispy chicken bites</span>
+            </div>
+            <div class="menu-item">
+                <span>french Fries</span>
+                <span>$3</span>
+                <span>goldem potato fries</span>
+            </div>
+            <div class="menu-item">
+                <span>fried chicken</span>
+                <span>$8</span>
+                <span>crinchy fried chicken</span>
+            </div>
+             <div class="menu-item">
+                <span>hot dog</span>
+                <span>4.50</span>
+                <span>sausage in a bun</span>
+            </div>
+             <div class="menu-item">
+                <span>chilli cheese fries</span>
+                <span>5.50</span>
+                <span>fries with chilli and cheese</span>
+            </div>
+             <div class="menu-item">
+                <span>onion rings</span>
+                <span>3.50</span>
+                <span>fried onion rings</span>
+            </div>
+             <div class="menu-item">
+                <span>tacos</span>
+                <span>6.00</span>
+                <span>tacos with meat and cheese</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="order-form">
+     <form action="order_handler.php" method="POST" ">
+        <h2>Place Your Order</h2>
+
+        <input type="text" id="Customer_Name" name="Customer_Name" placeholder="Your Name" required>
+
+        <input type="email" id="customer_Email" name="Customer_Email" placeholder="Your Email" required>
+
+        <textarea id="Order_Details" name="Order_Details" rows="4" placeholder="Enter your order details (e.g., Pizza - 1, Burger - 2)" required></textarea>
+
+        <button type="submit">Order Now</button>
+     </form>
+    </div>
+
+   
+    <script>
+        function searchFood() {
+            const query = document.getElementById('search').value.toLowerCase();
+            const items = document.querySelectorAll('.menu-item');
+            items.forEach(item => {
+                const itemName = item.querySelector('span').textContent.toLowerCase();
+                if (itemName.includes(query)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        function placeOrder() {
+            const name = document.getElementById('name').value;
+            const customer_email = document.getElementById('Email').value;
+            const orderDetails = document.getElementById('order-details').value;
+
+            if (name && customer_email && orderDetails) {
+                alert(`Thank you, ${name}! Your order has been placed.\nDetails:\n${orderDetails}`);
+            } else {
+                alert('Please fill in all fields before placing your order.');
+            }
+        }
+    </script>
+     <FOOTer>ONLINE FOOD ORDERING WEBSITE. All rights reserved.</FOOTer>   
+</body>
+</html>
+
+

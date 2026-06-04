@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        header {
+            background-color: #ff5722;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 15px 15px;
+            text-decoration: none;
+            font-size: 1.2 em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-bar input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+        }
+        .search-bar button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #ff5722;
+            color: white;
+            cursor: pointer;
+            border-radius: 0 4px 4px 0;
+        }
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            text-decoration: dotted;
+        }
+        .category-card {
+            width: 40% 40%;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+            overflow: hidden;
+        }
+        .category-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .category-card h3 {
+            margin: 10px 0;
+        }
+        .category-card p {
+            margin: 10px;
+            color: #666;
+        }
+        footer {
+            background-color: #333;
+            color: rgb(80, 20, 244);
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+<header><hr>
+    <h1><u>Food Delivery Service</u></h1>
+</header>
+
+<nav>
+    <a href="#categories">Categories</a>
+    <a href="#restaurants">Restaurants</a>
+    <a href="#contact">Contact</a>
+</nav>
+<div>
+
+</div>
+
+<div class="container">
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" placeholder="Search for food...">
+        <button on click="searchfood()">SEARCH</button>
+    </div>
+    <!-- Restaurants Section -->
+        <section id="restaurants" style="margin-top: 40px;">
+            <h2 style="text-align: center;">Top Restaurants</h2>
+            <div class="categories">
+                <div class="category-card">
+                    <a href="https://glovoapp.com/ke/en/" target="_blank">
+                        <img src="C:users/Miriam/pictures/glovo.png">
+                    </a>
+                    <h3><b>GLOVO</b></h3>
+                    <p>Famous for its delicious pizzas and pastas.</p>
+                </div>
+                <div class="category-card">
+                    <a href="https://kfc.ke/" target="_blank">
+                     <img src="C:Users/Miriam/pictures/KFC.png" >   
+    
+                    </a>
+                    <h3><b>KFC</b></h3>
+                    <p>Offers a variety of healthy and vegan options.</p>
+                </div>
+                <div class="category-card">
+                    <a href="https://www.mcdonalds.com/us/en-us.html">
+                    <img src="C:Users/Miriam/pictures/Mcdonalds.png">
+    
+                    </a>
+                    <h3><b>Mcdonalds</b></h3>
+                    <p>Specializes in exquisite desserts and beverages.</p>
+                </div>
+            </div>
+        </section>
+
+    <!-- Categories Section -->
+    <section id="categories">
+        <h2 style="text-align: center;">Popular Categories</h2>
+        <div class="categories">
+            <div class="category-card">
+                <a href="C:\xampp\htdocs\FOOD ORDERING/FAST FOOD.html" target="_blank">
+                <img src="C:Users/Miriam/pictures/fast foods.png">
+
+                </a>
+                <h3>Fast Food</h3>
+                <p>Order from the best fast food restaurants near you.</p>
+            </div>
+            <div class="category-card">
+                <a href="">
+                <img src="C:Users/Miriam/pictures/healthy eats.png">
+
+                </a>
+                <h3>Healthy eats</h3>
+                <p>Discover nutritious meals and salads.</p>
+            </div>
+            <div class="category-card">
+                <a href="">
+                <img src="C:Users/Miriam/pictures/desserts.png">
+
+                </a>
+                <h3>Desserts</h3>
+                <p>Satisfy your sweet tooth with our dessert options.</p>
+            </div>
+            <div class="category-card">
+                <a href="">
+                <img src="C:Users/Miriam/pictures/drinks.png">  
+
+                </a>
+                <h3>drinks</h3>
+                <p>refreshents available at an affordable price.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="margin-top: 40px;">
+        <h2 style="text-align: center;">Contact Us</h2>
+        <form style="max-width: 600px; margin: auto;">
+            <input type="text" placeholder="YOUR NAME" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px;">
+            <input type="email" placeholder="YOUR EMAIL" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px;">
+            <textarea placeholder="YOUR MESSAGE" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; height: 100px;"></textarea>
+            <button type="submit" onclick="sendmessage()" style="padding: 10px 20px; background-color: #ffc107; color: white; border: none; cursor: pointer; width: 100%; border-radius: 4px;">Send Message</button>
+        </form>
+
+    
+<table section>
+    <table border= "1">
+  <tr> 
+    <th>FRUITS</th>
+    <th>DRINKS</th>
+    <th>SHAKES</th>
+  </tr>
+  <tr>
+    <td>mango</td>
+    <td>TEQUILA</td>
+    <td>MANGO SHAKE</td>
+  </tr>
+  <tr>
+    <td>APPLE</td>
+    <td>APPLE SHOTS</td>
+    <td>APPLE SHAKE</td>
+  </tr>
+</div>
+<div>
+    <a href="C:\xampp\htdocs\STAFFLOGINANDREGISTRATION/staff_login.html"><h4>STAFF LOGIN</h4></a>
+</div>
+
+
+<div >
+    <a href="ronniemuli274@gmail.com">send email</a>
+</div>
+
+<footer>
+    <p>&copy; 2024 Food Delivery Service. All rights reserved.</p>
+</footer>
+</body>
+</html>
